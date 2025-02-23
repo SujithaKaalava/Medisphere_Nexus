@@ -1,25 +1,25 @@
 import React, { Fragment } from "react";
 import { Control } from "react-hook-form";
-// import {
-//   FormControl,
-//   FormField,
-//   FormItem,
-//   FormLabel,
-//   FormMessage,
-// } from "./ui/form";
-// import { Input } from "./ui/input";
-// import {
-//   Select,
-//   SelectContent,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "./ui/select";
-// import { Checkbox } from "./ui/checkbox";
-// import { Textarea } from "./ui/textarea";
-// import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
-// import { Label } from "./ui/label";
-// import { Switch } from "./ui/switch";
+import {
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "./form";
+import { Input } from "./input";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./select";
+import { Checkbox } from "./checkbox";
+import { Textarea } from "./textarea";
+import { RadioGroup, RadioGroupItem } from "./radio-group";
+import { Label } from "./label";
+import { Switch } from "./switch";
 
 interface InputProps {
   type: "input" | "select" | "checkbox" | "switch" | "radio" | "textarea";
@@ -130,7 +130,7 @@ export const CustomInput = (props: InputProps) => {
     <FormField
       control={control}
       name={name}
-      render={({field}) => (
+      render={({ field }) => (
         <FormItem className="w-full">
           {type !== "radio" && type !== "checkbox" && (
             <FormLabel>{label}</FormLabel>
